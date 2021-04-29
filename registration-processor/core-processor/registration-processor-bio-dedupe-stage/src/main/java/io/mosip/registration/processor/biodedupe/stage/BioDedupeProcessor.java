@@ -396,6 +396,7 @@ public class BioDedupeProcessor {
 				&& matchedRegIds.contains(registrationStatusDto.getRegistrationId())) {
 			matchedRegIds.remove(registrationStatusDto.getRegistrationId());
 		}
+		matchedRegIds = null;
 		if (matchedRegIds == null || matchedRegIds.isEmpty()) {
 			registrationStatusDto.setLatestTransactionStatusCode(RegistrationTransactionStatusCode.SUCCESS.toString());
 			object.setIsValid(Boolean.TRUE);
